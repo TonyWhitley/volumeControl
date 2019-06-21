@@ -7,8 +7,10 @@ adjust the volume.
 
 Design notes:
 Using the pygame library https://www.pygame.org/docs/index.html
-which provides events when controller buttons are pressed.  That
-is used for the GUI too simply because it offers it.
+which provides events when controller buttons are pressed.  
+
+That is used for the GUI too simply because it offers it.  
+Maybe not, tkinter will be more suitable.
 
 The main function is buttonMonitor() which is a callback function
 called by pygame when a button is pressed. It then calls functions

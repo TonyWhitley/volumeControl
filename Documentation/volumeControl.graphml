@@ -144,7 +144,7 @@ not found"<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y
           <y:Geometry height="154.0" width="325.0" x="-537.0" y="-455.83333333333337"/>
           <y:Fill color="#99CC00" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="18" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="114.2587890625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="287.1484375" x="18.92578125" xml:space="preserve" y="19.87060546875">VR Volume Control
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="18" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="114.2587890625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="287.1484375" x="18.92578125" xml:space="preserve" y="19.87060546875">Volume Control
 One button selects which of a list of
 processes which will have its
 volume adjusted. Up and down
@@ -421,7 +421,6 @@ volume<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAn
       </data>
     </edge>
     <edge id="e19" source="n14" target="n7">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -432,7 +431,6 @@ volume<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAn
       </data>
     </edge>
     <edge id="e20" source="n8" target="n11">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -445,7 +443,6 @@ volume<y:LabelModel><y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAn
       </data>
     </edge>
     <edge id="e21" source="n2" target="n6">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
