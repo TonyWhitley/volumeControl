@@ -1,0 +1,23 @@
+{
+    "nextProcess": {
+        "button": 0,
+        "controllerName": "usb gamepad"
+    },
+    "previousProcess": {
+        "button": 1,
+        "controllerName": "usb gamepad"
+    },
+    "processNames": [
+        "rFactor 2.exe",
+        "discord.exe",
+        "crewchief.exe"
+    ],
+    "volumeDown": {
+        "button": 3,
+        "controllerName": "usb gamepad"
+    },
+    "volumeUp": {
+        "button": 2,
+        "controllerName": "usb gamepad"
+    }
+}
