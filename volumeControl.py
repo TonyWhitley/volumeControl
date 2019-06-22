@@ -10,7 +10,8 @@ Using the pygame library https://www.pygame.org/docs/index.html
 which provides events when controller buttons are pressed.  
 
 That is used for the GUI too simply because it offers it.  
-Maybe not, tkinter will be more suitable.
+Maybe not, tkinter will be more suitable - but initially just
+print to the console.
 
 The main function is buttonMonitor() which is a callback function
 called by pygame when a button is pressed. It then calls functions
@@ -34,6 +35,8 @@ message if a specified button is not found.
 There is a class for reading and writing configuration items from/to
 a data file.
 """
+
+import statusDisplay
 
 def buttonMonitor(buttonEvent):
     """
@@ -61,7 +64,9 @@ class Volume:
         Set them
         Read volume step
         """
-        pass
+        self.process = processes[0]
+    def setCurrentProcess(self, process):
+        self.process = process
     def volumeUp(self):
         """
         Increase volume of current process
@@ -71,21 +76,6 @@ class Volume:
         """
         Decrease volume of current process
         """
-        pass
-
-class StatusDisplay:
-    def __init__(self, processNames):
-        """
-        Create frame
-        """
-        pass
-    def processNotFound(self, processName):
-        pass
-    def buttonNotFound(self, buttonName):
-        pass
-    def currentProcess(self, processName):
-        pass
-    def displayVolume(self, volume):
         pass
 
 class Config:

@@ -34,7 +34,10 @@
     <Compile Include="statusDisplay.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="test_volume_control.py">
+    <Compile Include="tests\test_statusDisplay.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_volume_control.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="masterVolumeExample.py" />
@@ -47,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Documentation\" />
+    <Folder Include="tests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Documentation\volumeControl.graphml" />
