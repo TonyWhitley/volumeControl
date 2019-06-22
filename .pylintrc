@@ -1,0 +1,9 @@
+[MASTER]
+# Add files or directories matching the regex patterns to the blacklist. The
+# regex matches against base names, not paths.
+# Ignore all .py files under the tests subdirectory.
+#ignore-patterns=tests/**/*.py
+#ignore-patterns=env/**/*/py
+ignore-patterns=pygame/*/pygame/__init__.py
+ignore=tests,env,pygame
+disable=unnecessary-pass

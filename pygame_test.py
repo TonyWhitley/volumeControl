@@ -1,3 +1,5 @@
+# pylint: skip-file
+# type: ignore
 # https://www.pygame.org/docs/index.html
 import pygame
 

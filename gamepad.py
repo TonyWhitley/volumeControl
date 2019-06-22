@@ -1,3 +1,5 @@
+# pylint: skip-file
+# type: ignore
 """Simple example showing how to get gamepad events."""
 #https://github.com/zeth/inputs
 

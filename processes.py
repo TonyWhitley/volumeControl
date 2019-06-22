@@ -1,7 +1,6 @@
-
+# pylint: skip-file
+# type: ignore
 import psutil
- 
- 
  
 def getListOfProcessSortedByMemory():
     '''

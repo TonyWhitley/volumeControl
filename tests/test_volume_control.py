@@ -1,3 +1,5 @@
+# pylint: skip-file
+# type: ignore
 import json
 import pygame   # https://www.pygame.org/docs/index.html
 
@@ -17,10 +19,10 @@ class Test_config(unittest.TestCase):
             'previousProcess': {
                 'controllerName': 'usb gamepad',
                 'button': 1},
-            'volumeUp': {
+            'volume_up': {
                 'controllerName': 'usb gamepad',
                 'button': 2},
-            'volumeDown': {
+            'volume_down': {
                 'controllerName': 'usb gamepad',
                 'button': 3},
             'processNames': ['rFactor 2.exe', 'discord.exe', 'crewchief.exe']
@@ -94,9 +96,9 @@ class Test_volumeControl(unittest.TestCase):
         """
         pass
 
-    def test_set_volume(self):
+    def test_get_volume(self):
         """
-        Set the volume of a process
+        Get the volume of a process
         """
         pass
 

@@ -1,3 +1,5 @@
+# pylint: skip-file
+# type: ignore
 """
 Get and set access to master volume example.
 

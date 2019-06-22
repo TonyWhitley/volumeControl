@@ -341,3 +341,4 @@ healthchecksdb
 
 env/
 pygame/
+/.mypy_cache/3.6

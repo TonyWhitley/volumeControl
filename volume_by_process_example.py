@@ -1,3 +1,5 @@
+# pylint: skip-file
+# type: ignore
 """
 Mutes the volume of all processes, but unmutes Firefox process.
 

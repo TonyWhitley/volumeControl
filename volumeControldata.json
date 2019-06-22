@@ -12,11 +12,11 @@
         "discord.exe",
         "crewchief.exe"
     ],
-    "volumeDown": {
+    "volume_down": {
         "button": 3,
         "controllerName": "usb gamepad"
     },
-    "volumeUp": {
+    "volume_up": {
         "button": 2,
         "controllerName": "usb gamepad"
     }
