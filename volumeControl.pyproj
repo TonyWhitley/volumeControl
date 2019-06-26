@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>82523063-f9d1-4444-899c-4cc6b0ffc015</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>masterVolumeExample.py</StartupFile>
+    <StartupFile>text2speech.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -44,6 +44,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="masterVolumeExample.py" />
+    <Compile Include="text2speech.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="volumeControl.py">
       <SubType>Code</SubType>
     </Compile>
@@ -56,6 +59,7 @@
     <Folder Include="tests\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Documentation\GeorgeVoiceEnable.reg" />
     <Content Include="Documentation\volumeControl.graphml" />
     <Content Include="Documentation\volumeControl.jpg" />
     <Content Include="requirements.txt" />
