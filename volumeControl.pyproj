@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Documentation\GeorgeVoiceEnable.reg" />
+    <Content Include="Documentation\SarahVoiceEnable.reg" />
+    <Content Include="Documentation\SusanVoiceEnable.reg" />
     <Content Include="Documentation\volumeControl.graphml" />
     <Content Include="Documentation\volumeControl.jpg" />
     <Content Include="requirements.txt" />
