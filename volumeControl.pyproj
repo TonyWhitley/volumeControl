@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>82523063-f9d1-4444-899c-4cc6b0ffc015</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>buttonMonitor.py</StartupFile>
+    <StartupFile>volumeControl.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
