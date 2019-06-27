@@ -37,6 +37,7 @@ There is a class for reading and writing configuration items from/to
 a data file.
 """
 
+from config import Config
 import status_display
 
 def button_monitor(button_event):
@@ -95,3 +96,9 @@ class Volume:
         Decrease volume of current process
         """
         pass
+
+if __name__ == "__main__":
+    _config_o = Config()
+    _section = 'buttons'
+    _val = 'controller'
+    _value = _config_o.get(_section, _val)

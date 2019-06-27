@@ -1,6 +1,25 @@
 # pylint: skip-file
 # type: ignore
 import psutil
+
+class Processes:
+	def __init__(self):
+		self.get_processes()
+	def get_processes(self):
+		self.listOfProcessNames = list()
+		# Iterate over all running processes
+		for proc in psutil.process_iter():
+		   # Get process detail as dictionary
+		   pInfoDict = proc.as_dict(attrs=['pid', 'name'])
+		   # Append dict of process detail in list
+		   self.listOfProcessNames.append(pInfoDict)
+	def get_pid(self, process_name: str):
+		pid = None
+		for _pdict in self.listOfProcessNames:
+			if _pdict['name'].lower() == process_name.lower():
+				pid = _pdict['pid']
+				break
+		return pid
  
 def getListOfProcessSortedByMemory():
     '''
@@ -57,5 +76,21 @@ def main():
     for elem in listOfRunningProcess[:5] :
         print(elem)
  
+def main2():
+    p_o = Processes()
+    pidD = p_o.get_pid('Discord.exe')
+    pidCC = p_o.get_pid('CrewChiefV4.exe')
+    pidSteam = p_o.get_pid('Steam.exe')
+    pidRF2 = p_o.get_pid('rFactor2.exe')
+    if pidD:
+        print(f'Discord {pidD:d}')
+    if pidCC:
+        print(f'CrewChief {pidCC:d}')
+    if pidSteam:
+        print(f'Steam {pidSteam:d}')
+    if pidRF2:
+        print(f'rF2 {pidRF2:d}')
+
 if __name__ == '__main__':
-   main()
+   #main()
+   main2()
