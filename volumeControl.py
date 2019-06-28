@@ -40,6 +40,7 @@ a data file.
 from buttonMonitor import Buttons
 from config import Config
 from processes import Processes
+from volume_by_process_example import Audio
 import status_display
 
 NEXT_PROCESS = 'nextProcess'
@@ -81,24 +82,11 @@ class _Processes:
         #'processes'
         _config_o = Config()
         _section = 'processes'
-        _process_names =  _config_o.get_all(_section)
-        for _name in _process_names:
-            _vol,_spoken_name = _config_o.get(_section,_name).split(',')
-            self._processes.append([_name, 
-                                    None,
-                                    int(_vol),
-                                    _spoken_name]
-                                   )
-        p_o = Processes()
-        for _process in self._processes:
-           _pid = p_o.get_pid(_process[0])
-           if _pid:
-               _process[1] = _pid
-
-        """
+        self._process_names =  _config_o.get_all(_section)
         p_o = Processes()
 
-        for _name in _process_names:
+        self._in_use_process_names = list()
+        for _name in self._process_names:
             _vol,_spoken_name = _config_o.get(_section,_name).split(',')
             _pid = p_o.get_pid(_name)
             if _pid:
@@ -107,9 +95,8 @@ class _Processes:
                                         int(_vol),
                                         _spoken_name]
                                         )
-                break
+                self._in_use_process_names.append(_name)
             #else if PID not found don't include it in the list
-        """
 
     def select(self): # Next process
         """
@@ -135,6 +122,9 @@ class _Processes:
                       _val)
         _config_o.write()
 
+    def get_list_of_processes(self):
+        return self._process_names, self._in_use_process_names
+
 class Volume:
     """
     docstring
@@ -146,18 +136,21 @@ class Volume:
         Read volume step
         """
         self.process = processes[0]
-        self.volume = 50
+        self.processes = processes
         self.tts_o = Text2Speech()
-
+        self.audio_o = Audio()
+        for _process in processes:
+            self.audio_o.set_volume(_process[0], _process[2]/100)
     def set_current_process(self, process):
         """
         docstring
         """
+        self.process = process[0]
         self.process_name = process[3]
         self.volume = process[2]
         _vol_str = 'Current process is: %s' % self.process_name
+        print(_vol_str)
         self.tts_o.say(_vol_str)
-        self._set_volume()
     def volume_up(self):
         """
         Increase volume of current process
@@ -169,31 +162,50 @@ class Volume:
         """
         Decrease volume of current process
         """
-        if self.volume > 10:
+        if self.volume > 0:
             self.volume -= 10
         self._set_volume()
     def _set_volume(self):
+        self.audio_o.set_volume(self.process, self.volume/100)
         _vol_str = '%s volume set to %d' % (self.process_name, self.volume)
+        print(_vol_str)
         self.tts_o.say(_vol_str)
     def get_volume(self):
         return self.volume
+    def restore_100pc_volume(self):
+        for _process in self.processes:
+            self.audio_o.set_volume(_process[0], 1.0)
 
 if __name__ == "__main__":
     from text2speech import Text2Speech
 
+    print('\nIndividual Volume Control\n')
     tts_o = Text2Speech()
 
     buttons_o   = button_monitor()
     processes_o = _Processes()
     next_p = processes_o.get()
-    volume_o    = Volume(processes_o._processes)
+
+    _process_names, _in_use_process_names = processes_o.get_list_of_processes()
+    print('\nLooking for:')
+    for _p in _process_names:
+        print('  ', _p)
+    print('\nFound these programs running:')
+    for _p in _in_use_process_names:
+        print('  ', _p)
+    print('\nCtrl/C to exit...\n')
+
+    volume_o = Volume(processes_o._processes)
     volume_o.set_current_process(next_p)
 
     while 1:
         event = buttons_o.check_for_event() 
         if event:
-            _ev = 'Gamepad ' + event + ' pressed'
+            _ev = event + ' pressed'
             print(_ev)
+            if event == "QUIT":
+                volume_o.restore_100pc_volume()
+                break
             #tts_o.say(_ev)
             if event == NEXT_PROCESS:
                 processes_o.select()

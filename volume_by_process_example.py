@@ -7,6 +7,18 @@ https://github.com/AndreMiras/pycaw
 """
 from pycaw.pycaw import AudioUtilities
 
+class Audio:
+    def __init__(self):
+        self.sessions = AudioUtilities.GetAllSessions()
+    def set_volume(self, process_name: str, volume: float):
+        for session in self.sessions:
+            if session.Process:
+                #print(session.Process.name(), session.Process.pid)
+                if session.Process.name() == process_name:
+                    volume_o = session.SimpleAudioVolume
+                    volume_o.SetMasterVolume(volume, None)
+
+
 def x():
         mgr = AudioUtilities.GetAudioSessionManager()
         if mgr is None:

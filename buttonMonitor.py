@@ -125,9 +125,12 @@ class Buttons:
         """
         result = None
         for _event in pygame.event.get(): # User did something
-            if _event.type == pygame.QUIT: # If user clicked close
+            if _event.type == pygame.QUIT \
+                 or (_event.type == pygame.KEYDOWN \
+                    and _event.key == pygame.K_ESCAPE):
+                # If user clicked close
                 result = "QUIT" # Flag that we are done 
-                                # Don't think we get this...
+                                # Ctrl/C
         
             # print(pygame.event.event_name(_event.type))
             # Possible joystick actions: 
