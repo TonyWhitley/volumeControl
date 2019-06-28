@@ -13,9 +13,9 @@ button_values = {
     'volume_down'       : '2'
     }
 process_names = {
-    'rFactor 2.exe'     : '50',
-    'discord.exe'       : '50',
-    'crewchief.exe'     : '50'
+    'rFactor2.exe'      : '40, R Factor',
+    'discord.exe'       : '50, Discord',
+    'crewchiefv4.exe'   : '60, Crew Chief'
     }
 
 class Config:
@@ -63,6 +63,19 @@ class Config:
             self.set(section, val, '')
             return None
 
+    def get_all(self, section):
+        """
+        # get all the keys in section
+        """
+        _keys = list()
+        try:
+            for _key in self.config[section]:
+                _keys.append(_key)
+
+        except Exception as e: #NoSectionError: # No such section in file
+            pass
+        return _keys
+
     def write(self):
         """
         # save to a file
@@ -83,3 +96,9 @@ if __name__ == "__main__":
     else:
         print('%s/%s: <None>' % (_section, _val))
         _config_o.write()
+
+    _section = 'processes'
+    for key in  _config_o.get_all(_section):
+        print(key)
+
+    pass

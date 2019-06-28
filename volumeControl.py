@@ -39,6 +39,7 @@ a data file.
 
 from buttonMonitor import Buttons
 from config import Config
+from processes import Processes
 import status_display
 
 NEXT_PROCESS = 'nextProcess'
@@ -66,7 +67,7 @@ def button_monitor():
 
     return Buttons_o
 
-class Processes:
+class _Processes:
     """
     docstring
     """
@@ -78,7 +79,38 @@ class Processes:
         Find each process
         """
         #'processes'
-        self._processes = ['rFactor 2.exe','discord.exe','crewchief.exe']
+        _config_o = Config()
+        _section = 'processes'
+        _process_names =  _config_o.get_all(_section)
+        for _name in _process_names:
+            _vol,_spoken_name = _config_o.get(_section,_name).split(',')
+            self._processes.append([_name, 
+                                    None,
+                                    int(_vol),
+                                    _spoken_name]
+                                   )
+        p_o = Processes()
+        for _process in self._processes:
+           _pid = p_o.get_pid(_process[0])
+           if _pid:
+               _process[1] = _pid
+
+        """
+        p_o = Processes()
+
+        for _name in _process_names:
+            _vol,_spoken_name = _config_o.get(_section,_name).split(',')
+            _pid = p_o.get_pid(_name)
+            if _pid:
+                self._processes.append([_name, 
+                                        _pid,
+                                        int(_vol),
+                                        _spoken_name]
+                                        )
+                break
+            #else if PID not found don't include it in the list
+        """
+
     def select(self): # Next process
         """
         docstring
@@ -91,6 +123,17 @@ class Processes:
         docstring
         """
         return self._processes[self._current_process]
+
+    def set_volume(self, volume: int):
+        self._processes[self._current_process][2] = volume
+        _config_o = Config()
+        _section = 'processes'
+        _spoken_name = self._processes[self._current_process][3]
+        _val='%s, %s' % (str(volume), _spoken_name.strip())
+        _config_o.set(_section,
+                      self._processes[self._current_process][0],
+                      _val)
+        _config_o.write()
 
 class Volume:
     """
@@ -110,25 +153,30 @@ class Volume:
         """
         docstring
         """
-        self.process = process
-        _vol_str = 'Current process is %s' % self.process
+        self.process_name = process[3]
+        self.volume = process[2]
+        _vol_str = 'Current process is: %s' % self.process_name
         self.tts_o.say(_vol_str)
+        self._set_volume()
     def volume_up(self):
         """
         Increase volume of current process
         """
         if self.volume < (101 - 10):
             self.volume += 10
-        _vol_str = '%s volume set to %d' % (self.process, self.volume)
-        self.tts_o.say(_vol_str)
+        self._set_volume()
     def volume_down(self):
         """
         Decrease volume of current process
         """
         if self.volume > 10:
             self.volume -= 10
-        _vol_str = '%s volume set to %d' % (self.process, self.volume)
+        self._set_volume()
+    def _set_volume(self):
+        _vol_str = '%s volume set to %d' % (self.process_name, self.volume)
         self.tts_o.say(_vol_str)
+    def get_volume(self):
+        return self.volume
 
 if __name__ == "__main__":
     from text2speech import Text2Speech
@@ -136,7 +184,7 @@ if __name__ == "__main__":
     tts_o = Text2Speech()
 
     buttons_o   = button_monitor()
-    processes_o = Processes()
+    processes_o = _Processes()
     next_p = processes_o.get()
     volume_o    = Volume(processes_o._processes)
     volume_o.set_current_process(next_p)
@@ -153,7 +201,9 @@ if __name__ == "__main__":
                 volume_o.set_current_process(next_p)
             if event == VOLUME_UP:
                 volume_o.volume_up()
+                processes_o.set_volume(volume_o.get_volume())
             if event == VOLUME_DOWN:
                 volume_o.volume_down()
+                processes_o.set_volume(volume_o.get_volume())
 
     pass
