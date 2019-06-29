@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>82523063-f9d1-4444-899c-4cc6b0ffc015</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>volumeControl.py</StartupFile>
+    <StartupFile>config.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="configure.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="gamepad.py">

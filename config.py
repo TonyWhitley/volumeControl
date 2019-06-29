@@ -3,20 +3,37 @@ docstring
 """
 from configparser import ConfigParser
 from os.path import exists
+import pprint
 
 CONFIG_FILE_NAME = 'volumeControl.ini'
-sections = ['buttons', 'processes']
-button_values = {
-    'controller'        : 'usb gamepad',
-    'nextProcess'       : '0',
-    'volume_up'         : '1',
-    'volume_down'       : '2'
-    }
-process_names = {
-    'rFactor2.exe'      : '40, R Factor',
-    'discord.exe'       : '50, Discord',
-    'crewchiefv4.exe'   : '60, Crew Chief'
-    }
+
+defaults = {
+    'buttons': {'controller': 'usb gamepad',
+             'nextprocess': '0',
+             'volume_down': '2',
+             'volume_up': '1'},
+    'processes': {'crewchiefv4.exe': '40, Crew Chief',
+               'discord.exe': '70, Discord',
+               'rfactor2.exe': '60, R Factor',
+               'vlc.exe': '10, V L C'}}
+
+new_defaults = {
+    'nextprocess': {'device': 'usb gamepad',
+             'type': 'button',
+             'value': '0'},
+    'volume_down': {'device': 'usb gamepad',
+             'type': 'axis',
+             'value': '-1'},
+    'volume_up': {'device': 'usb gamepad',
+             'type': 'hat',
+             'value': '0,1'},
+    'volume_up': {'device': 'keyboard',   # (Keyboard example)
+             'type': 'key',
+             'value': 'a'},
+    'processes': {'crewchiefv4.exe': '40, Crew Chief',
+               'discord.exe': '70, Discord',
+               'rfactor2.exe': '60, R Factor',
+               'vlc.exe': '10, V L C'}}
 
 class Config:
     """
@@ -29,17 +46,17 @@ class Config:
         self.config = ConfigParser()
 
         # set default values
-        for val, default in button_values.items():
-            self.set('buttons', val, default)
-        for val, default in process_names.items():
-            self.set('processes', val, default)
-    
+        for section in defaults.keys():
+            for val, default in defaults[section].items():
+                self.set(section, val, default)
         # if there is an existing file parse values over those
         if exists(CONFIG_FILE_NAME):
             self.config.read(CONFIG_FILE_NAME)
+            pprint.pprint({section: dict(self.config[section]) for section in self.config.sections()})
         else:
             self.write()
             self.config.read(CONFIG_FILE_NAME)
+        pass
 
     def set(self, section, val, value):
         """

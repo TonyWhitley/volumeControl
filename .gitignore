@@ -344,3 +344,6 @@ pygame/
 /.mypy_cache/3.6
 /text2speechHAL.py
 /buttonMonitor.save
+/build/volumeControl
+/volumeControl.exe
+/volumeControl.spec
