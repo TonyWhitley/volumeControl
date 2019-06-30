@@ -70,6 +70,8 @@
     <Content Include="Documentation\SusanVoiceEnable.reg" />
     <Content Include="Documentation\volumeControl.graphml" />
     <Content Include="Documentation\volumeControl.jpg" />
+    <Content Include="makeexe.bat" />
+    <Content Include="pyInstallerSetup.bat" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>

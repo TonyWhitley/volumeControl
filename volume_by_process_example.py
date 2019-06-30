@@ -4,6 +4,7 @@
 Mutes the volume of all processes, but unmutes Firefox process.
 
 https://github.com/AndreMiras/pycaw
+pip install https://github.com/AndreMiras/pycaw/archive/master.zip
 """
 from pycaw.pycaw import AudioUtilities
 

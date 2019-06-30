@@ -1,7 +1,7 @@
 """
 docstring
 """
-from configparser import ConfigParser
+from configparser import ConfigParser, NoSectionError
 from os.path import exists
 import pprint
 
@@ -27,13 +27,23 @@ new_defaults = {
     'volume_up': {'device': 'usb gamepad',
              'type': 'hat',
              'value': '0,1'},
-    'volume_up': {'device': 'keyboard',   # (Keyboard example)
+    'alt_volume_up': {'device': 'keyboard',   # (Keyboard example)
              'type': 'key',
              'value': 'a'},
     'processes': {'crewchiefv4.exe': '40, Crew Chief',
                'discord.exe': '70, Discord',
                'rfactor2.exe': '60, R Factor',
                'vlc.exe': '10, V L C'}}
+"""
+Joystick button pressed.  {'joy': 1, 'button': 9}
+button
+Joystick axis moved.  {'joy': 1, 'axis': 0, 'value': -1.000030518509476}
+axis
+Joystick hat moved.  {'joy': 0, 'hat': 0, 'value': (-1, 0)}
+hat
+Key pressed.  {'unicode': 'h', 'key': 104, 'mod': 0, 'scancode': 35, 'window': None}
+key
+"""
 
 class Config:
     """
@@ -56,7 +66,7 @@ class Config:
         else:
             self.write()
             self.config.read(CONFIG_FILE_NAME)
-        pass
+        pass #pylint: disable=unnecessary-pass
 
     def set(self, section, val, value):
         """
@@ -76,7 +86,7 @@ class Config:
             return self.config.get(section, val)
             #else:
             #return self.config.getint(section, val)
-        except Exception as e: #NoSectionError: # No such section in file
+        except NoSectionError:  # No such section in file
             self.set(section, val, '')
             return None
 
@@ -89,7 +99,7 @@ class Config:
             for _key in self.config[section]:
                 _keys.append(_key)
 
-        except Exception as e: #NoSectionError: # No such section in file
+        except NoSectionError: # No such section in file
             pass
         return _keys
 
@@ -118,4 +128,4 @@ if __name__ == "__main__":
     for key in  _config_o.get_all(_section):
         print(key)
 
-    pass
+    pass #pylint: disable=unnecessary-pass

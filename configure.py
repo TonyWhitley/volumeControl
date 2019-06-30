@@ -1,6 +1,8 @@
 """
 Configure the user events that drive the program
 """
+# pylint: disable=maybe-no-member
+# warns about pygame.init() and pygame.JOYBUTTONDOWN etc.
 import pygame
 from buttonMonitor import Buttons
 
@@ -39,7 +41,7 @@ class Inputs(Buttons):
                 result = 'key'
         return result
 
-def text(text):
+def text(_text):
     # define the RGB value for white, 
     #  green, blue colour . 
     white = (255, 255, 255) 
@@ -65,11 +67,11 @@ def text(text):
   
     # create a text suface object, 
     # on which text is drawn on it. 
-    text = font.render(text, True, green, blue) 
+    _text = font.render(_text, True, green, blue) 
   
     # create a rectangular object for the 
     # text surface object 
-    textRect = text.get_rect()  
+    textRect = _text.get_rect()  
   
     # set the center of the rectangular object. 
     textRect.center = (X // 2, Y // 2) 
@@ -81,14 +83,14 @@ def text(text):
     # copying the text surface object 
     # to the display surface object  
     # at the center coordinate. 
-    display_surface.blit(text, textRect) 
+    display_surface.blit(_text, textRect) 
 
     # Draws the surface object to the screen.   
     pygame.display.update()
 
 def main():
     inputs_o = Inputs()
-    screen = pygame.display.set_mode((512,384))
+    pygame.display.set_mode((512,384))
     text('Press key for "Next program"')
 
     while 1:

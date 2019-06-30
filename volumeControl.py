@@ -129,6 +129,8 @@ class Volume:
     """
     docstring
     """
+    process_name = str()
+    volume = int()
     def __init__(self, processes):
         """
         Read initial volume levels for each process

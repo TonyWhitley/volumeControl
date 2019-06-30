@@ -1,9 +1,7 @@
 astroid==2.2.5
 colorama==0.4.1
 comtypes==1.1.7
-enum34==1.1.6
 future==0.17.1
-inputs==0.5
 isort==4.3.20
 lazy-object-proxy==1.4.1
 mccabe==0.6.1

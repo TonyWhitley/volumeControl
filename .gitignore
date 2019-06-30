@@ -347,3 +347,4 @@ pygame/
 /build/volumeControl
 /volumeControl.exe
 /volumeControl.spec
+/envPyGame
