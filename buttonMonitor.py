@@ -1,7 +1,10 @@
 # https://www.pygame.org/docs/index.html
 # pylint: disable=maybe-no-member
 # warns about pygame.init() and pygame.JOYBUTTONDOWN etc.
+import keyboard
+
 import pygame
+
 
 class Buttons:
     """
@@ -23,6 +26,7 @@ class Buttons:
         """
         pygame.init()
         # called by init()    pygame.joystick.init()
+
         # Get count of joysticks
         self.joystick_count = pygame.joystick.get_count()
 
@@ -38,6 +42,38 @@ class Buttons:
             self._registry[_name]['buttons'] = list()
             self._registry[_name]['axes'] = list()
             self._registry[_name]['hats'] = list()
+        self._registry['keyboard'] = dict()
+        self._registry['keyboard']['keys'] = list()
+
+        """
+        You can't use PyGame to generate key events without opening a visible 
+        display.  Instead, use keyboard to call callbacks when a key is
+        pressed and then generate pygame events.
+        """
+        keyboard.on_press(self.keyboard_callback)
+        keyboard.add_hotkey('ctrl+c', self.ctrlc)
+
+    def keyboard_callback(self, event):
+        """
+        pygame wants
+        {'unicode': 'h', 'key': 104, 'mod': 0, 'scancode': 35, 'window': None}
+        Do our best
+        """
+        _key_event = pygame.event.Event(pygame.KEYDOWN, 
+                                        unicode=event.name,
+                                        scancode=event.scan_code,
+                                        key=None,   # can't (easily) calculate that
+                                        mod=0,      # what is that?
+                                        window=None
+                                        )
+        pygame.event.post(_key_event)
+    def ctrlc(self):
+        """
+        Ctrl/C pressed, generate a pygame QUIT event
+        """
+        _ctrlc = pygame.event.Event(pygame.QUIT)
+        pygame.event.post(_ctrlc)
+
 
     def register_for_button_press_event(self,
                                        device: str,
@@ -85,32 +121,59 @@ class Buttons:
             _t = (self._joysticks[device], hat, tup, event_name)
             self._registry[device]['hats'].append(_t)
 
+    def register_for_key_press_event(self, 
+                                      key: str, 
+                                      event_name: str):
+        """
+        Specify a key press we want to know about
+        key: 0-n the axis that is pressed
+        event_name: the string that is returned when the event occurs
+        """
+        _t = ('keyboard', key, event_name)
+        self._registry['keyboard']['keys'].append(_t)
+
     def _parse(self, _event):
         """
         Check if _event is registered, return the user-defined string if so.
         """
-        for device, joy in self._joysticks.items():
-            if joy == _event['joy']:
-                if 'button' in _event:
-                    for _e in self._registry[device]['buttons']:
-                        if _e[0] == _event['joy']:
-                            if _e[1] == _event['button']:
-                                return _e[2]
-                elif 'axis' in _event:
-                    for _e in self._registry[device]['axes']:
-                        if _e[0] == _event['joy']:
-                            if _e[1] == _event['axis']: 
-                                if _event['value'] > 0.5 and _e[2]:
-                                    return _e[3]
-                                if _event['value'] < -0.5 and not _e[2]:
-                                    return _e[3]
-                elif 'hat' in _event:
-                    for _e in self._registry[device]['hats']:
-                        if _e[0] == _event['joy']:
-                            if _e[1] == _event['hat']: 
-                                if _event['value'] == _e[2]:
-                                    return _e[3]
-            # else the event is not for this joystick
+        """
+        Joystick button pressed.  {'joy': 1, 'button': 9}
+        button
+        Joystick axis moved.  {'joy': 1, 'axis': 0, 'value': -1.000030518509476}
+        axis
+        Joystick hat moved.  {'joy': 0, 'hat': 0, 'value': (-1, 0)}
+        hat
+        Key pressed.  {'unicode': 'h', 'key': 104, 'mod': 0, 'scancode': 35, 'window': None}
+        key
+        """
+        if 'key' in _event:
+            for _e in self._registry['keyboard']['keys']:
+                if _e[0] == _event['unicode']:
+                    if _e[1] == _event['button']:
+                        return _e[2]
+        else:
+            for device, joy in self._joysticks.items():
+                if joy == _event['joy']:
+                    if 'button' in _event:
+                        for _e in self._registry[device]['buttons']:
+                            if _e[0] == _event['joy']:
+                                if _e[1] == _event['button']:
+                                    return _e[2]
+                    elif 'axis' in _event:
+                        for _e in self._registry[device]['axes']:
+                            if _e[0] == _event['joy']:
+                                if _e[1] == _event['axis']: 
+                                    if _event['value'] > 0.5 and _e[2]:
+                                        return _e[3]
+                                    if _event['value'] < -0.5 and not _e[2]:
+                                        return _e[3]
+                    elif 'hat' in _event:
+                        for _e in self._registry[device]['hats']:
+                            if _e[0] == _event['joy']:
+                                if _e[1] == _event['hat']: 
+                                    if _event['value'] == _e[2]:
+                                        return _e[3]
+                # else the event is not for this joystick
         return None
     
     def __debugPrint(self, dbgstr: str):
@@ -125,9 +188,7 @@ class Buttons:
         """
         result = None
         for _event in pygame.event.get(): # User did something
-            if _event.type == pygame.QUIT \
-                 or (_event.type == pygame.KEYDOWN \
-                    and _event.key == pygame.K_ESCAPE):
+            if _event.type == pygame.QUIT:
                 # If user clicked close
                 result = "QUIT" # Flag that we are done 
                                 # Ctrl/C
@@ -146,6 +207,12 @@ class Buttons:
                 result = self._parse(_event.dict)
             if _event.type == pygame.JOYBUTTONUP:
                 self.__debugPrint("Joystick button released.")
+            if _event.type == pygame.KEYDOWN:
+                if _event.dict['unicode'] == 'esc':
+                    result = "QUIT" # Flag that we are done 
+                else:
+                    result = self._parse(_event.dict)
+
         
         return result
 

@@ -43,9 +43,10 @@ from processes import Processes
 from volume_by_process_example import Audio
 import status_display
 
-NEXT_PROCESS = 'nextProcess'
+NEXT_PROCESS = 'nextprocess'
 VOLUME_UP = 'volume_up'
 VOLUME_DOWN= 'volume_down'
+alt_volume_up='alt_volume_up'
 
 def button_monitor():
     """
@@ -57,14 +58,28 @@ def button_monitor():
     """
     _config_o = Config()
     _section = 'buttons'
-    _controller =  _config_o.get(_section, 'controller')
-    _nextProcess = int(_config_o.get(_section, NEXT_PROCESS))
-    _volume_up =   int(_config_o.get(_section, VOLUME_UP))
-    _volume_down = int(_config_o.get(_section, VOLUME_DOWN))
     Buttons_o = Buttons()
-    Buttons_o.register_for_button_press_event(_controller, _nextProcess, NEXT_PROCESS)
-    Buttons_o.register_for_button_press_event(_controller, _volume_up,   VOLUME_UP)
-    Buttons_o.register_for_button_press_event(_controller, _volume_down, VOLUME_DOWN)
+    for _event_name in [NEXT_PROCESS, VOLUME_UP, VOLUME_DOWN, alt_volume_up]:
+        _event =  _config_o.get_event(_event_name)
+        if _event['type'] == 'button':
+            Buttons_o.register_for_button_press_event(_event['device'],
+                                                      int(_event['value']),
+                                                      _event_name)
+        elif _event['type'] == 'axis':
+            Buttons_o.register_for_axis_press_event(_event['device'],
+                                                    int(_event['axis']),
+                                                    int(_event['value']),
+                                                    _event_name)
+        elif _event['type'] == 'hat':
+            _tup1,_tup2 = _event['value'].split(',')
+            Buttons_o.register_for_hat_press_event(_event['device'],
+                                                   int(_event['hat']),
+                                                   (int(_tup1),int(_tup2)),
+                                                   _event_name)
+        elif _event['type'] == 'key':
+            Buttons_o.register_for_key_press_event(_event['value'],
+                                                   _event_name)
+
 
     return Buttons_o
 
@@ -109,7 +124,10 @@ class _Processes:
         """
         docstring
         """
-        return self._processes[self._current_process]
+        if len(self._processes):
+            return self._processes[self._current_process]
+        else:
+            return None
 
     def set_volume(self, volume: int):
         self._processes[self._current_process][2] = volume
@@ -213,7 +231,7 @@ if __name__ == "__main__":
                 processes_o.select()
                 next_p = processes_o.get()
                 volume_o.set_current_process(next_p)
-            if event == VOLUME_UP:
+            if event == VOLUME_UP or event == alt_volume_up:
                 volume_o.volume_up()
                 processes_o.set_volume(volume_o.get_volume())
             if event == VOLUME_DOWN:

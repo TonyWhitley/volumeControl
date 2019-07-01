@@ -7,7 +7,7 @@ import pprint
 
 CONFIG_FILE_NAME = 'volumeControl.ini'
 
-defaults = {
+old_defaults = {
     'buttons': {'controller': 'usb gamepad',
              'nextprocess': '0',
              'volume_down': '2',
@@ -17,15 +17,17 @@ defaults = {
                'rfactor2.exe': '60, R Factor',
                'vlc.exe': '10, V L C'}}
 
-new_defaults = {
+defaults = {
     'nextprocess': {'device': 'usb gamepad',
              'type': 'button',
              'value': '0'},
     'volume_down': {'device': 'usb gamepad',
              'type': 'axis',
+             'axis': '0',
              'value': '-1'},
     'volume_up': {'device': 'usb gamepad',
              'type': 'hat',
+             'hat': '0',
              'value': '0,1'},
     'alt_volume_up': {'device': 'keyboard',   # (Keyboard example)
              'type': 'key',
@@ -34,30 +36,21 @@ new_defaults = {
                'discord.exe': '70, Discord',
                'rfactor2.exe': '60, R Factor',
                'vlc.exe': '10, V L C'}}
-"""
-Joystick button pressed.  {'joy': 1, 'button': 9}
-button
-Joystick axis moved.  {'joy': 1, 'axis': 0, 'value': -1.000030518509476}
-axis
-Joystick hat moved.  {'joy': 0, 'hat': 0, 'value': (-1, 0)}
-hat
-Key pressed.  {'unicode': 'h', 'key': 104, 'mod': 0, 'scancode': 35, 'window': None}
-key
-"""
+
 
 class Config:
     """
     docstring
     """
-    def __init__(self):
+    def __init__(self, _defaults=defaults):
         """
         # instantiate
         """
         self.config = ConfigParser()
 
         # set default values
-        for section in defaults.keys():
-            for val, default in defaults[section].items():
+        for section in _defaults.keys():
+            for val, default in _defaults[section].items():
                 self.set(section, val, default)
         # if there is an existing file parse values over those
         if exists(CONFIG_FILE_NAME):
@@ -102,6 +95,16 @@ class Config:
         except NoSectionError: # No such section in file
             pass
         return _keys
+
+    def get_event(self, event_name: str):
+        """
+        Get the details of an event
+        * device
+        * type of input
+        * input value
+        """
+        _event = self.config[event_name]
+        return _event 
 
     def write(self):
         """

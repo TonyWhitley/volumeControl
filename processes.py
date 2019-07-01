@@ -20,7 +20,7 @@ class Processes:
 				pid = _pdict['pid']
 				break
 		return pid
- 
+
 def getListOfProcessSortedByMemory():
     '''
     Get list of running process sorted by Memory Usage
