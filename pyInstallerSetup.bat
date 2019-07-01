@@ -25,4 +25,5 @@ pause
 goto :eof
 
 :not37
+if exist %env%\Lib\site-packages\enum echo enum is present and has been seen to break pyinstaller
 goto :eof

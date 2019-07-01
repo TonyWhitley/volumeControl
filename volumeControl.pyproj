@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>82523063-f9d1-4444-899c-4cc6b0ffc015</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>config.py</StartupFile>
+    <StartupFile>volumeControl.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -34,6 +34,9 @@
     <Compile Include="gamepad.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="keyboardMonitor.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="processes.py">
       <SubType>Code</SubType>
     </Compile>
@@ -41,6 +44,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="status_display.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_config.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="tests\test_statusDisplay.py">
