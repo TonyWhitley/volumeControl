@@ -3,7 +3,7 @@ docstring
 """
 from configparser import ConfigParser, NoSectionError
 from os.path import exists
-import pprint
+#import pprint
 
 CONFIG_FILE_NAME = 'volumeControl.ini'
 
@@ -25,7 +25,7 @@ defaults = {
              'type': 'axis',
              'axis': '0',
              'value': '-1'},
-    'volume_up': {'device': 'usb gamepad',
+    'volume_up': {'device': 'Logitech G25 Racing Wheel USB',
              'type': 'hat',
              'hat': '0',
              'value': '0,1'},
@@ -55,7 +55,7 @@ class Config:
         # if there is an existing file parse values over those
         if exists(CONFIG_FILE_NAME):
             self.config.read(CONFIG_FILE_NAME)
-            pprint.pprint({section: dict(self.config[section]) for section in self.config.sections()})
+            #pprint.pprint({section: dict(self.config[section]) for section in self.config.sections()})
         else:
             self.write()
             self.config.read(CONFIG_FILE_NAME)

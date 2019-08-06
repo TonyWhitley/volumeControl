@@ -46,7 +46,6 @@ import status_display
 NEXT_PROCESS = 'nextprocess'
 VOLUME_UP = 'volume_up'
 VOLUME_DOWN= 'volume_down'
-alt_volume_up='alt_volume_up'
 
 def button_monitor():
     """
@@ -59,27 +58,31 @@ def button_monitor():
     _config_o = Config()
     _section = 'buttons'
     Buttons_o = Buttons()
-    for _event_name in [NEXT_PROCESS, VOLUME_UP, VOLUME_DOWN, alt_volume_up]:
+    for _event_name in [NEXT_PROCESS, VOLUME_UP, VOLUME_DOWN]:
         _event =  _config_o.get_event(_event_name)
         if _event['type'] == 'button':
-            Buttons_o.register_for_button_press_event(_event['device'],
-                                                      int(_event['value']),
-                                                      _event_name)
+            Buttons_o.register_for_button_press_event(
+                                                    _event['device'],
+                                                    int(_event['value']),
+                                                    _event_name)
         elif _event['type'] == 'axis':
-            Buttons_o.register_for_axis_press_event(_event['device'],
+            Buttons_o.register_for_axis_press_event(
+                                                    _event['device'],
                                                     int(_event['axis']),
                                                     int(_event['value']),
                                                     _event_name)
         elif _event['type'] == 'hat':
             _tup1,_tup2 = _event['value'].split(',')
-            Buttons_o.register_for_hat_press_event(_event['device'],
-                                                   int(_event['hat']),
-                                                   (int(_tup1),int(_tup2)),
-                                                   _event_name)
+            Buttons_o.register_for_hat_press_event(
+                                                    _event['device'],
+                                                    int(_event['hat']),
+                                                    (int(_tup1),int(_tup2)),
+                                                    _event_name)
         elif _event['type'] == 'key':
             Buttons_o.register_for_key_press_event(_event['value'],
                                                    _event_name)
-
+        else:
+            _status = 'No such event as {}', _event_name
 
     return Buttons_o
 
@@ -201,41 +204,56 @@ if __name__ == "__main__":
 
     print('\nIndividual Volume Control\n')
     tts_o = Text2Speech()
+    tts_o.set_rate(180)
+    tts_o.set_volume(0.9)
+    tts_o.select_voice('George')
 
     buttons_o   = button_monitor()
-    processes_o = _Processes()
-    next_p = processes_o.get()
+    _errors = buttons_o.get_errors()
+    if _errors != []: 
+        for _e in _errors:
+            print(_e)
+        tts_o.say(_errors)
+        tts_o.say('Quitting due to errors.')
+    else:
+        processes_o = _Processes()
+        next_p = processes_o.get()
 
-    _process_names, _in_use_process_names = processes_o.get_list_of_processes()
-    print('\nLooking for:')
-    for _p in _process_names:
-        print('  ', _p)
-    print('\nFound these programs running:')
-    for _p in _in_use_process_names:
-        print('  ', _p)
-    print('\nCtrl/C to exit...\n')
+        _process_names, _in_use_process_names = processes_o.get_list_of_processes()
+        print('\nLooking for:')
+        for _p in _process_names:
+            print('  ', _p)
+        if len(_in_use_process_names) == 0:
+            err_txt = 'None of the programs are running.\nQuitting.'
+            print(err_txt)
+            tts_o.say(err_txt)
+        else:
+            print('\nFound these programs running:')
+            for _p in _in_use_process_names:
+                print('  ', _p)
+            print('\nCtrl/C to exit...\n')
 
-    volume_o = Volume(processes_o._processes)
-    volume_o.set_current_process(next_p)
+            volume_o = Volume(processes_o._processes)
+            volume_o.set_current_process(next_p)
 
-    while 1:
-        event = buttons_o.check_for_event() 
-        if event:
-            _ev = event + ' pressed'
-            print(_ev)
-            if event == "QUIT":
-                volume_o.restore_100pc_volume()
-                break
-            #tts_o.say(_ev)
-            if event == NEXT_PROCESS:
-                processes_o.select()
-                next_p = processes_o.get()
-                volume_o.set_current_process(next_p)
-            if event == VOLUME_UP or event == alt_volume_up:
-                volume_o.volume_up()
-                processes_o.set_volume(volume_o.get_volume())
-            if event == VOLUME_DOWN:
-                volume_o.volume_down()
-                processes_o.set_volume(volume_o.get_volume())
+            while 1:
+                event = buttons_o.check_for_event() 
+                if event:
+                    _ev = event + ' pressed'
+                    print(_ev)
+                    if event == "QUIT":
+                        volume_o.restore_100pc_volume()
+                        break
+                    #tts_o.say(_ev)
+                    if event == NEXT_PROCESS:
+                        processes_o.select()
+                        next_p = processes_o.get()
+                        volume_o.set_current_process(next_p)
+                    if event == VOLUME_UP:
+                        volume_o.volume_up()
+                        processes_o.set_volume(volume_o.get_volume())
+                    if event == VOLUME_DOWN:
+                        volume_o.volume_down()
+                        processes_o.set_volume(volume_o.get_volume())
 
-    pass
+            pass
