@@ -5,6 +5,7 @@ Configure the user events that drive the program
 # warns about pygame.init() and pygame.JOYBUTTONDOWN etc.
 import pygame
 from buttonMonitor import Buttons
+from wx_configurer_gui import Configurer
 
 class Inputs(Buttons):
     def __init__(self):
@@ -90,6 +91,10 @@ def text(_text):
 
 def main():
     inputs_o = Inputs()
+
+    configurer_gui = Configurer(0)
+    configurer_gui.MainLoop()
+
     pygame.display.set_mode((512,384))
     text('Press key for "Next program"')
 
@@ -100,6 +105,14 @@ def main():
             #break
     
     text('Press key for "Volume up"')
+
+    while 1:
+        event = inputs_o.get()
+        if event:
+            print(event)
+            break
+
+    text('Press key for "Volume down"')
 
     while 1:
         event = inputs_o.get()

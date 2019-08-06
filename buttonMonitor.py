@@ -20,6 +20,7 @@ class Buttons:
     """
     _registry = dict()
     _joysticks = dict()
+    _errors = list()
     def __init__(self):
         """
         docstring
@@ -42,6 +43,9 @@ class Buttons:
             self._registry[_name]['buttons'] = list()
             self._registry[_name]['axes'] = list()
             self._registry[_name]['hats'] = list()
+            self._registry[_name]['num_buttons'] = joystick.get_numbuttons()
+            self._registry[_name]['num_axes'] = joystick.get_numaxes()
+            self._registry[_name]['num_hats'] = joystick.get_numhats()
         self._registry['keyboard'] = dict()
         self._registry['keyboard']['keys'] = list()
 
@@ -50,22 +54,23 @@ class Buttons:
         display.  Instead, use keyboard to call callbacks when a key is
         pressed and then generate pygame events.
         """
-        keyboard.on_press(self.keyboard_callback)
         keyboard.add_hotkey('ctrl+c', self.ctrlc)
 
     def keyboard_callback(self, event):
         """
-        pygame wants
+        keyboard library callback to get key events into the pygame event
+        queue. pygame wants
         {'unicode': 'h', 'key': 104, 'mod': 0, 'scancode': 35, 'window': None}
         Do our best
         """
         _key_event = pygame.event.Event(pygame.KEYDOWN, 
-                                        unicode=event.name,
-                                        scancode=event.scan_code,
+                                        unicode=event,
+                                        scancode=35,
                                         key=None,   # can't (easily) calculate that
                                         mod=0,      # what is that?
                                         window=None
                                         )
+        #_key_event_dict = {'unicode': 'h', 'key': 104, 'mod': 0, 'scancode': 35, 'window': None}
         pygame.event.post(_key_event)
     def ctrlc(self):
         """
@@ -86,8 +91,15 @@ class Buttons:
         event_name: the string that is returned when the event occurs
         """
         if device in self._joysticks:
-            _t = (self._joysticks[device], button, event_name)
-            self._registry[device]['buttons'].append(_t)
+            if button < self._registry[device]['num_buttons']:
+                _t = (self._joysticks[device], button, event_name)
+                self._registry[device]['buttons'].append(_t)
+                return
+            else:
+                self._errors.append('Joystick "{}" does not have button {}'.
+                                    format(device, button))
+                return
+        self._errors.append('Joystick "{}" not found'.format(device))
 
     def register_for_axis_press_event(self, 
                                       device: str, 
@@ -102,8 +114,15 @@ class Buttons:
         event_name: the string that is returned when the event occurs
         """
         if device in self._joysticks:
-            _t = (self._joysticks[device], axis, positive, event_name)
-            self._registry[device]['axes'].append(_t)
+            if axis < self._registry[device]['num_axes']:
+                _t = (self._joysticks[device], axis, positive, event_name)
+                self._registry[device]['axes'].append(_t)
+                return
+            else:
+                self._errors.append('Joystick "{}" does not have axis {}'.
+                                    format(device, axis))
+                return
+        self._errors.append('Joystick "{}" not found'.format(device))
 
     def register_for_hat_press_event(self, 
                                       device: str, 
@@ -118,19 +137,33 @@ class Buttons:
         event_name: the string that is returned when the event occurs
         """
         if device in self._joysticks:
-            _t = (self._joysticks[device], hat, tup, event_name)
-            self._registry[device]['hats'].append(_t)
+            if hat < self._registry[device]['num_hats']:
+                _t = (self._joysticks[device], hat, tup, event_name)
+                self._registry[device]['hats'].append(_t)
+                return
+            else:
+                self._errors.append('Joystick "{}" does not have hat {}'.
+                                    format(device, hat))
+                return
+        self._errors.append('Joystick "{}" not found'.format(device))
 
     def register_for_key_press_event(self, 
                                       key: str, 
                                       event_name: str):
         """
         Specify a key press we want to know about
-        key: 0-n the axis that is pressed
+        key: ASCII of the key that is pressed
         event_name: the string that is returned when the event occurs
         """
-        _t = ('keyboard', key, event_name)
+        _t = (key, event_name)
         self._registry['keyboard']['keys'].append(_t)
+        keyboard.add_hotkey(key, self.keyboard_callback, args=key)
+
+    def get_errors(self):
+        """
+        Return any errors in registering events
+        """
+        return self._errors
 
     def _parse(self, _event):
         """
@@ -149,8 +182,7 @@ class Buttons:
         if 'key' in _event:
             for _e in self._registry['keyboard']['keys']:
                 if _e[0] == _event['unicode']:
-                    if _e[1] == _event['button']:
-                        return _e[2]
+                    return 'keyboard %s' % (_e[1])
         else:
             for device, joy in self._joysticks.items():
                 if joy == _event['joy']:
@@ -158,7 +190,7 @@ class Buttons:
                         for _e in self._registry[device]['buttons']:
                             if _e[0] == _event['joy']:
                                 if _e[1] == _event['button']:
-                                    return _e[2]
+                                    return '%s %s' % (device, _e[2])
                     elif 'axis' in _event:
                         for _e in self._registry[device]['axes']:
                             if _e[0] == _event['joy']:
@@ -208,10 +240,12 @@ class Buttons:
             if _event.type == pygame.JOYBUTTONUP:
                 self.__debugPrint("Joystick button released.")
             if _event.type == pygame.KEYDOWN:
-                if _event.dict['unicode'] == 'esc':
-                    result = "QUIT" # Flag that we are done 
-                else:
-                    result = self._parse(_event.dict)
+                # Can't exit on Esc, that's pressed a lot in rFactor
+                # so we'd keep on exiting this program.
+                #if _event.dict['unicode'] == 'esc':
+                #    result = "QUIT" # Flag that we are done 
+                #else:
+                result = self._parse(_event.dict)
 
         
         return result
@@ -242,6 +276,10 @@ def G25(Buttons_o):
     Buttons_o.register_for_hat_press_event('Logitech G25 Racing Wheel USB', 0, (0,1), 'Up')
     Buttons_o.register_for_hat_press_event('Logitech G25 Racing Wheel USB', 0, (0,-1), 'Down')
 
+def keyboard_register(Buttons_o):
+    Buttons_o.register_for_key_press_event('t', 'T')
+    Buttons_o.register_for_key_press_event('#', 'hash')
+
 def UsbGamepad(Buttons_o):
     """
     Register for events from a USB gamepad
@@ -265,6 +303,8 @@ if __name__ == '__main__':
 
     b_o = Buttons()
     UsbGamepad(b_o)
+    G25(b_o)
+    keyboard_register(b_o)
     # Used to manage how fast the screen updates
     clock = pygame.time.Clock()
 
@@ -274,10 +314,12 @@ if __name__ == '__main__':
     while 1:
         event = b_o.check_for_event() 
         if event:
-            _ev = 'Gamepad ' + event + ' pressed'
+            _ev = event + ' pressed'
             print(_ev)
             tts_o.say(_ev)
-        #!= "QUIT":
-        # Limit to 20 frames per second
-        clock.tick(20)
+        if event == "QUIT":
+            break
+        else:
+            # Limit to 20 frames per second
+            clock.tick(20)
     pass
