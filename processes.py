@@ -36,14 +36,14 @@ def getListOfProcessSortedByMemory():
            listOfProcObjects.append(pinfo);
        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
            pass
- 
+
     # Sort list of dict by key vms i.e. memory usage
     listOfProcObjects = sorted(listOfProcObjects, key=lambda procObj: procObj['vms'], reverse=True)
- 
+
     return listOfProcObjects
- 
+
 def main():
- 
+
     print("*** Iterate over all running process and print process ID & Name ***")
     # Iterate over all running process
     for proc in psutil.process_iter():
@@ -54,9 +54,9 @@ def main():
             print(processName , ' ::: ', processID)
         except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
             pass
- 
+
     print('*** Create a list of all running processes ***')
- 
+
     listOfProcessNames = list()
     # Iterate over all running processes
     for proc in psutil.process_iter():
@@ -64,18 +64,18 @@ def main():
        pInfoDict = proc.as_dict(attrs=['pid', 'name', 'cpu_percent'])
        # Append dict of process detail in list
        listOfProcessNames.append(pInfoDict)
- 
+
     # Iterate over the list of dictionary and print each elem
     for elem in listOfProcessNames:
         print(elem)
- 
+
     print('*** Top 5 process with highest memory usage ***')
- 
+
     listOfRunningProcess = getListOfProcessSortedByMemory()
- 
+
     for elem in listOfRunningProcess[:5] :
         print(elem)
- 
+
 def main2():
     p_o = Processes()
     pidD = p_o.get_pid('Discord.exe')

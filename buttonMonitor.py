@@ -14,7 +14,7 @@ class Buttons:
         register_for_button_press_event()
         register_for_axis_press_event()
         register_for_hat_press_event()
-    then 
+    then
         check_for_event()
     returns the user-defined string when an event occurs.
     """
@@ -35,7 +35,7 @@ class Buttons:
         for i in range(self.joystick_count):
             joystick = pygame.joystick.Joystick(i)
             joystick.init()
-    
+
             # Get the name from the OS for the controller/joystick
             _name = joystick.get_name().strip()
             self._joysticks[_name] = i
@@ -50,7 +50,7 @@ class Buttons:
         self._registry['keyboard']['keys'] = list()
 
         """
-        You can't use PyGame to generate key events without opening a visible 
+        You can't use PyGame to generate key events without opening a visible
         display.  Instead, use keyboard to call callbacks when a key is
         pressed and then generate pygame events.
         """
@@ -63,7 +63,7 @@ class Buttons:
         {'unicode': 'h', 'key': 104, 'mod': 0, 'scancode': 35, 'window': None}
         Do our best
         """
-        _key_event = pygame.event.Event(pygame.KEYDOWN, 
+        _key_event = pygame.event.Event(pygame.KEYDOWN,
                                         unicode=event,
                                         scancode=35,
                                         key=None,   # can't (easily) calculate that
@@ -101,10 +101,10 @@ class Buttons:
                 return
         self._errors.append('Joystick "{}" not found'.format(device))
 
-    def register_for_axis_press_event(self, 
-                                      device: str, 
-                                      axis: int, 
-                                      positive: bool, 
+    def register_for_axis_press_event(self,
+                                      device: str,
+                                      axis: int,
+                                      positive: bool,
                                       event_name: str):
         """
         Specify an axis change we want to know about
@@ -124,10 +124,10 @@ class Buttons:
                 return
         self._errors.append('Joystick "{}" not found'.format(device))
 
-    def register_for_hat_press_event(self, 
-                                      device: str, 
-                                      hat: int, 
-                                      tup: (int,int), 
+    def register_for_hat_press_event(self,
+                                      device: str,
+                                      hat: int,
+                                      tup: (int,int),
                                       event_name: str):
         """
         Specify a hat button press we want to know about
@@ -147,8 +147,8 @@ class Buttons:
                 return
         self._errors.append('Joystick "{}" not found'.format(device))
 
-    def register_for_key_press_event(self, 
-                                      key: str, 
+    def register_for_key_press_event(self,
+                                      key: str,
                                       event_name: str):
         """
         Specify a key press we want to know about
@@ -194,7 +194,7 @@ class Buttons:
                     elif 'axis' in _event:
                         for _e in self._registry[device]['axes']:
                             if _e[0] == _event['joy']:
-                                if _e[1] == _event['axis']: 
+                                if _e[1] == _event['axis']:
                                     if _event['value'] > 0.5 and _e[2]:
                                         return _e[3]
                                     if _event['value'] < -0.5 and not _e[2]:
@@ -202,12 +202,12 @@ class Buttons:
                     elif 'hat' in _event:
                         for _e in self._registry[device]['hats']:
                             if _e[0] == _event['joy']:
-                                if _e[1] == _event['hat']: 
+                                if _e[1] == _event['hat']:
                                     if _event['value'] == _e[2]:
                                         return _e[3]
                 # else the event is not for this joystick
         return None
-    
+
     def __debugPrint(self, dbgstr: str):
         #if 0:
         #    print(dbgstr)
@@ -222,11 +222,11 @@ class Buttons:
         for _event in pygame.event.get(): # User did something
             if _event.type == pygame.QUIT:
                 # If user clicked close
-                result = "QUIT" # Flag that we are done 
+                result = "QUIT" # Flag that we are done
                                 # Ctrl/C
-        
+
             # print(pygame.event.event_name(_event.type))
-            # Possible joystick actions: 
+            # Possible joystick actions:
             # JOYAXISMOTION JOYBALLMOTION JOYBUTTONDOWN JOYBUTTONUP JOYHATMOTION
             if _event.type == pygame.JOYBUTTONDOWN:
                 #print("Joystick button pressed. ", _event.dict)
@@ -243,14 +243,14 @@ class Buttons:
                 # Can't exit on Esc, that's pressed a lot in rFactor
                 # so we'd keep on exiting this program.
                 #if _event.dict['unicode'] == 'esc':
-                #    result = "QUIT" # Flag that we are done 
+                #    result = "QUIT" # Flag that we are done
                 #else:
                 result = self._parse(_event.dict)
 
-        
+
         return result
 
- 
+
     def __del__(self):
         """
         # If you forget this line, the program will 'hang'
@@ -312,7 +312,7 @@ if __name__ == '__main__':
     tts_o = Text2Speech()
 
     while 1:
-        event = b_o.check_for_event() 
+        event = b_o.check_for_event()
         if event:
             _ev = event + ' pressed'
             print(_ev)

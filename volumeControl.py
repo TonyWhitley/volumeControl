@@ -108,7 +108,7 @@ class _Processes:
             _vol,_spoken_name = _config_o.get(_section,_name).split(',')
             _pid = p_o.get_pid(_name)
             if _pid:
-                self._processes.append([_name, 
+                self._processes.append([_name,
                                         _pid,
                                         int(_vol),
                                         _spoken_name]
@@ -210,7 +210,7 @@ if __name__ == "__main__":
 
     buttons_o   = button_monitor()
     _errors = buttons_o.get_errors()
-    if _errors != []: 
+    if _errors != []:
         for _e in _errors:
             print(_e)
         tts_o.say(_errors)
@@ -237,7 +237,7 @@ if __name__ == "__main__":
             volume_o.set_current_process(next_p)
 
             while 1:
-                event = buttons_o.check_for_event() 
+                event = buttons_o.check_for_event()
                 if event:
                     _ev = event + ' pressed'
                     print(_ev)

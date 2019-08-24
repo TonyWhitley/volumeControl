@@ -104,7 +104,7 @@ class Config:
         * input value
         """
         _event = self.config[event_name]
-        return _event 
+        return _event
 
     def write(self):
         """
