@@ -47,6 +47,31 @@ class Text2Speech:
             voice_name = voices[0].name.split()[1]
             self.say(f'Voice set to default, {voice_name:s}.')
 
+    def say_voices(self, _speak=True):
+        """
+        Say the voices available
+        """
+        voices = self.engine.getProperty('voices')  #getting details of current voice
+        if _speak:
+            self.say('Voices available ARE.')
+        for voice in voices:
+            # Extract the voice name from "Microsoft Hazel Desktop - English (Great Britain)"
+            words = voice.name.split()
+            voice_name = words[1]
+            if words[-2][0] == '(':
+                # Country has two words, not Australia/Canada/India/Ireland
+                voice_name += ' ' + words[-2]
+            voice_name += ' ' +  words[-1]
+            print(voice_name)
+            if _speak:
+                self.engine.setProperty('voice', voice.id)
+                self.say(f'{voice_name:s}.')
+        # Reset to first voice
+        self.engine.setProperty('voice', voices[0].id)
+
+    def print_voices(self):
+        self.say_voices(False)
+
     def get_volume(self):
         """ Volume """
         _vol = self.engine.getProperty('volume')
@@ -72,7 +97,9 @@ def main():
     tts_o = Text2Speech(verbose=True)
     tts_o.set_rate(180)
     tts_o.set_volume(0.9)
-    tts_o.select_voice('George')
+    #tts_o.say_voices()
+    tts_o.print_voices()
+    tts_o.select_voice('Sean')
     tts_o.get_volume()
     tts_o.get_rate()
 

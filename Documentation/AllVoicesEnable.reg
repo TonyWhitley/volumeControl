@@ -1,0 +1,702 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enAU_CatherineM]
+@="Microsoft Catherine - English (Australia)"
+"C09"="Microsoft Catherine - English (Australia)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,41,00,55,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,41,00,55,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,41,00,55,00,5c,00,4d,00,33,00,30,00,38,00,31,00,43,\
+  00,61,00,74,00,68,00,65,00,72,00,69,00,6e,00,65,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enAU_CatherineM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2015.0909"
+"Gender"="Female"
+"Language"="C09"
+"Name"="Microsoft Catherine"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enAU_JamesM]
+@="Microsoft James - English (Australia)"
+"C09"="Microsoft James - English (Australia)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,41,00,55,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,41,00,55,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,41,00,55,00,5c,00,4d,00,33,00,30,00,38,00,31,00,4a,\
+  00,61,00,6d,00,65,00,73,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enAU_JamesM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2015.0909"
+"Gender"="Male"
+"Language"="C09"
+"Name"="Microsoft James"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enCA_LindaM]
+@="Microsoft Linda - English (Canada)"
+"1009"="Microsoft Linda - English (Canada)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,43,00,41,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,43,00,41,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,43,00,41,00,5c,00,4d,00,34,00,31,00,30,00,35,00,4c,\
+  00,69,00,6e,00,64,00,61,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enCA_LindaM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2015.0909"
+"Gender"="Female"
+"Language"="1009"
+"Name"="Microsoft Linda"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; address=NativeSupported; telephone=NativeSupported; computer=NativeSupported; currency=NativeSupported; message=NativeSupported; name=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enCA_RichardM]
+@="Microsoft Richard - English (Canada)"
+"1009"="Microsoft Richard - English (Canada)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,43,00,41,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,43,00,41,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,43,00,41,00,5c,00,4d,00,34,00,31,00,30,00,35,00,52,\
+  00,69,00,63,00,68,00,61,00,72,00,64,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enCA_RichardM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2015.0909"
+"Gender"="Male"
+"Language"="1009"
+"Name"="Microsoft Richard"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; address=NativeSupported; telephone=NativeSupported; computer=NativeSupported; currency=NativeSupported; message=NativeSupported; name=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enGB_GeorgeM]
+@="Microsoft George - English (United Kingdom)"
+"809"="Microsoft George - English (United Kingdom)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,47,00,42,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,32,00,30,00,35,00,37,00,47,\
+  00,65,00,6f,00,72,00,67,00,65,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enGB_GeorgeM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Male"
+"Language"="809"
+"Name"="Microsoft George"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enGB_HazelM]
+@="Microsoft Hazel - English (United Kingdom)"
+"809"="Microsoft Hazel - English (United Kingdom)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,47,00,42,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,32,00,30,00,35,00,37,00,48,\
+  00,61,00,7a,00,65,00,6c,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enGB_HazelM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2016.0129"
+"Gender"="Female"
+"Language"="809"
+"Name"="Microsoft Hazel"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enGB_SusanM]
+@="Microsoft Susan - English (United Kingdom)"
+"809"="Microsoft Susan - English (United Kingdom)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,47,00,42,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,32,00,30,00,35,00,37,00,53,\
+  00,75,00,73,00,61,00,6e,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enGB_SusanM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Female"
+"Language"="809"
+"Name"="Microsoft Susan"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; address=NativeSupported; telephone=NativeSupported; computer=NativeSupported; currency=NativeSupported; message=NativeSupported; name=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enIE_SeanM]
+@="Microsoft Sean - English (Ireland)"
+"1809"="Microsoft Sean - English (Ireland)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,49,00,45,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,49,00,45,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,49,00,45,00,5c,00,4d,00,36,00,31,00,35,00,33,00,53,\
+  00,65,00,61,00,6e,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enIE_SeanM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2016.1130"
+"Gender"="Male"
+"Language"="1809"
+"Name"="Microsoft Sean"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enIN_HeeraM]
+@="Microsoft Heera - English (India)"
+"4009"="Microsoft Heera - English (India)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,49,00,4e,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,49,00,4e,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,49,00,4e,00,5c,00,4d,00,31,00,36,00,33,00,39,00,33,\
+  00,48,00,65,00,65,00,72,00,61,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enIN_HeeraM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Female"
+"Language"="4009"
+"Name"="Microsoft Heera"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; currency=NativeSupported; address=NativeSupported; telephone=NativeSupported; message=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enIN_RaviM]
+@="Microsoft Ravi - English (India)"
+"4009"="Microsoft Ravi - English (India)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,49,00,4e,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,49,00,4e,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,49,00,4e,00,5c,00,4d,00,31,00,36,00,33,00,39,00,33,\
+  00,52,00,61,00,76,00,69,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enIN_RaviM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Male"
+"Language"="4009"
+"Name"="Microsoft Ravi"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; currency=NativeSupported; address=NativeSupported; telephone=NativeSupported; message=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enUS_DavidM]
+@="Microsoft David - English (United States)"
+"409"="Microsoft David - English (United States)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,55,00,53,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,31,00,30,00,33,00,33,00,44,\
+  00,61,00,76,00,69,00,64,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enUS_DavidM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2016.0129"
+"Gender"="Male"
+"Language"="409"
+"Name"="Microsoft David"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; currency=NativeSupported; net=NativeSupported; url=NativeSupported; address=NativeSupported; alphanumeric=NativeSupported; Name=NativeSupported; media=NativeSupported; message=NativeSupported; companyName=NativeSupported; computer=NativeSupported; math=NativeSupported; duration=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enUS_MarkM]
+@="Microsoft Mark - English (United States)"
+"409"="Microsoft Mark - English (United States)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,55,00,53,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,31,00,30,00,33,00,33,00,4d,\
+  00,61,00,72,00,6b,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enUS_MarkM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Male"
+"Language"="409"
+"Name"="Microsoft Mark"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; currency=NativeSupported; net=NativeSupported; url=NativeSupported; address=NativeSupported; alphanumeric=NativeSupported; Name=NativeSupported; media=NativeSupported; message=NativeSupported; companyName=NativeSupported; computer=NativeSupported; math=NativeSupported; duration=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enUS_ZiraM]
+@="Microsoft Zira - English (United States)"
+"409"="Microsoft Zira - English (United States)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,55,00,53,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,31,00,30,00,33,00,33,00,5a,\
+  00,69,00,72,00,61,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\MSTTS_V110_enUS_ZiraM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Female"
+"Language"="409"
+"Name"="Microsoft Zira"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; currency=NativeSupported; net=NativeSupported; url=NativeSupported; address=NativeSupported; alphanumeric=NativeSupported; Name=NativeSupported; media=NativeSupported; message=NativeSupported; companyName=NativeSupported; computer=NativeSupported; math=NativeSupported; duration=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enAU_CatherineM]
+@="Microsoft Catherine - English (Australia)"
+"C09"="Microsoft Catherine - English (Australia)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,41,00,55,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,41,00,55,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,41,00,55,00,5c,00,4d,00,33,00,30,00,38,00,31,00,43,\
+  00,61,00,74,00,68,00,65,00,72,00,69,00,6e,00,65,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enAU_CatherineM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2015.0909"
+"Gender"="Female"
+"Language"="C09"
+"Name"="Microsoft Catherine"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enAU_JamesM]
+@="Microsoft James - English (Australia)"
+"C09"="Microsoft James - English (Australia)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,41,00,55,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,41,00,55,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,41,00,55,00,5c,00,4d,00,33,00,30,00,38,00,31,00,4a,\
+  00,61,00,6d,00,65,00,73,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enAU_JamesM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2015.0909"
+"Gender"="Male"
+"Language"="C09"
+"Name"="Microsoft James"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enCA_LindaM]
+@="Microsoft Linda - English (Canada)"
+"1009"="Microsoft Linda - English (Canada)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,43,00,41,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,43,00,41,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,43,00,41,00,5c,00,4d,00,34,00,31,00,30,00,35,00,4c,\
+  00,69,00,6e,00,64,00,61,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enCA_LindaM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2015.0909"
+"Gender"="Female"
+"Language"="1009"
+"Name"="Microsoft Linda"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; address=NativeSupported; telephone=NativeSupported; computer=NativeSupported; currency=NativeSupported; message=NativeSupported; name=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enCA_RichardM]
+@="Microsoft Richard - English (Canada)"
+"1009"="Microsoft Richard - English (Canada)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,43,00,41,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,43,00,41,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,43,00,41,00,5c,00,4d,00,34,00,31,00,30,00,35,00,52,\
+  00,69,00,63,00,68,00,61,00,72,00,64,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enCA_RichardM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2015.0909"
+"Gender"="Male"
+"Language"="1009"
+"Name"="Microsoft Richard"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; address=NativeSupported; telephone=NativeSupported; computer=NativeSupported; currency=NativeSupported; message=NativeSupported; name=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enGB_GeorgeM]
+@="Microsoft George - English (United Kingdom)"
+"809"="Microsoft George - English (United Kingdom)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,47,00,42,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,32,00,30,00,35,00,37,00,47,\
+  00,65,00,6f,00,72,00,67,00,65,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enGB_GeorgeM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Male"
+"Language"="809"
+"Name"="Microsoft George"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enGB_HazelM]
+@="Microsoft Hazel - English (United Kingdom)"
+"809"="Microsoft Hazel - English (United Kingdom)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,47,00,42,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,32,00,30,00,35,00,37,00,48,\
+  00,61,00,7a,00,65,00,6c,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enGB_HazelM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2016.0129"
+"Gender"="Female"
+"Language"="809"
+"Name"="Microsoft Hazel"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enGB_SusanM]
+@="Microsoft Susan - English (United Kingdom)"
+"809"="Microsoft Susan - English (United Kingdom)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,47,00,42,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,47,00,42,00,5c,00,4d,00,32,00,30,00,35,00,37,00,53,\
+  00,75,00,73,00,61,00,6e,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enGB_SusanM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Female"
+"Language"="809"
+"Name"="Microsoft Susan"
+"SayAsSupport"="spell=NativeSupported; cardinal=NativeSupported; ordinal=NativeSupported; date=NativeSupported; time=NativeSupported; address=NativeSupported; telephone=NativeSupported; computer=NativeSupported; currency=NativeSupported; message=NativeSupported; name=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enIE_SeanM]
+@="Microsoft Sean - English (Ireland)"
+"1809"="Microsoft Sean - English (Ireland)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,49,00,45,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,49,00,45,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,49,00,45,00,5c,00,4d,00,36,00,31,00,35,00,33,00,53,\
+  00,65,00,61,00,6e,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enIE_SeanM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2016.1130"
+"Gender"="Male"
+"Language"="1809"
+"Name"="Microsoft Sean"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; computer=NativeSupported; address=NativeSupported; currency=NativeSupported; message=NativeSupported; media=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enIN_HeeraM]
+@="Microsoft Heera - English (India)"
+"4009"="Microsoft Heera - English (India)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,49,00,4e,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,49,00,4e,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,49,00,4e,00,5c,00,4d,00,31,00,36,00,33,00,39,00,33,\
+  00,48,00,65,00,65,00,72,00,61,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enIN_HeeraM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Female"
+"Language"="4009"
+"Name"="Microsoft Heera"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; currency=NativeSupported; address=NativeSupported; telephone=NativeSupported; message=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enIN_RaviM]
+@="Microsoft Ravi - English (India)"
+"4009"="Microsoft Ravi - English (India)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,49,00,4e,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,49,00,4e,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,49,00,4e,00,5c,00,4d,00,31,00,36,00,33,00,39,00,33,\
+  00,52,00,61,00,76,00,69,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enIN_RaviM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Male"
+"Language"="4009"
+"Name"="Microsoft Ravi"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; currency=NativeSupported; address=NativeSupported; telephone=NativeSupported; message=NativeSupported; url=NativeSupported; alphanumeric=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enUS_DavidM]
+@="Microsoft David - English (United States)"
+"409"="Microsoft David - English (United States)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,55,00,53,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,31,00,30,00,33,00,33,00,44,\
+  00,61,00,76,00,69,00,64,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enUS_DavidM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2016.0129"
+"Gender"="Male"
+"Language"="409"
+"Name"="Microsoft David"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; currency=NativeSupported; net=NativeSupported; url=NativeSupported; address=NativeSupported; alphanumeric=NativeSupported; Name=NativeSupported; media=NativeSupported; message=NativeSupported; companyName=NativeSupported; computer=NativeSupported; math=NativeSupported; duration=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enUS_MarkM]
+@="Microsoft Mark - English (United States)"
+"409"="Microsoft Mark - English (United States)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,55,00,53,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,31,00,30,00,33,00,33,00,4d,\
+  00,61,00,72,00,6b,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enUS_MarkM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Male"
+"Language"="409"
+"Name"="Microsoft Mark"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; currency=NativeSupported; net=NativeSupported; url=NativeSupported; address=NativeSupported; alphanumeric=NativeSupported; Name=NativeSupported; media=NativeSupported; message=NativeSupported; companyName=NativeSupported; computer=NativeSupported; math=NativeSupported; duration=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enUS_ZiraM]
+@="Microsoft Zira - English (United States)"
+"409"="Microsoft Zira - English (United States)"
+"CLSID"="{179F3D56-1B0B-42B2-A962-59B7EF59FE1B}"
+"LangDataPath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,\
+  00,70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,\
+  65,00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,\
+  00,5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,53,00,54,00,54,00,53,00,\
+  4c,00,6f,00,63,00,65,00,6e,00,55,00,53,00,2e,00,64,00,61,00,74,00,00,00
+"VoicePath"=hex(2):25,00,77,00,69,00,6e,00,64,00,69,00,72,00,25,00,5c,00,53,00,\
+  70,00,65,00,65,00,63,00,68,00,5f,00,4f,00,6e,00,65,00,43,00,6f,00,72,00,65,\
+  00,5c,00,45,00,6e,00,67,00,69,00,6e,00,65,00,73,00,5c,00,54,00,54,00,53,00,\
+  5c,00,65,00,6e,00,2d,00,55,00,53,00,5c,00,4d,00,31,00,30,00,33,00,33,00,5a,\
+  00,69,00,72,00,61,00,00,00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\MSTTS_V110_enUS_ZiraM\Attributes]
+"Age"="Adult"
+"DataVersion"="11.0.2013.1022"
+"Gender"="Female"
+"Language"="409"
+"Name"="Microsoft Zira"
+"SayAsSupport"="spell=NativeSupported; cardinal=GlobalSupported; ordinal=NativeSupported; date=GlobalSupported; time=GlobalSupported; telephone=NativeSupported; currency=NativeSupported; net=NativeSupported; url=NativeSupported; address=NativeSupported; alphanumeric=NativeSupported; Name=NativeSupported; media=NativeSupported; message=NativeSupported; companyName=NativeSupported; computer=NativeSupported; math=NativeSupported; duration=NativeSupported"
+"SharedPronunciation"=""
+"Vendor"="Microsoft"
+"Version"="11.0"
+
