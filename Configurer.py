@@ -4,16 +4,16 @@ import pygame
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-import tkinter.font as font
+import tkinter.font as font 
 
-controls = {      #tkButton,
-                      #tkLabel,
-                            #tkStringVar,
+controls = {      #tkButton, 
+                      #tkLabel, 
+                            #tkStringVar, 
                                   #JoystickButton
   'Next program' : [None, None, None, 8],
   'Volume up' : [None, None, None, 9],
   'Volume down' : [None, None, None, 10]
-  }
+  } 
 
 class Controller:
   controllerNames = [
@@ -96,7 +96,7 @@ class Controller:
         self.num_axes = self.controller.get_numaxes()
         self.axis_state = [0] * self.num_axes
         self.num_buttons = self.controller.get_numbuttons()
-        self.controller_name = self.controller.get_name()
+        self.controller_name = self.controller.get_name()    
         for g in range(self.num_buttons):
           if self.getButtonState(g) == 'D':
             return g
@@ -110,7 +110,7 @@ class Controller:
 #########################
 class Tab:
   parentFrame = None
-  controller_o = Controller()
+  controller_o = Controller() 
   xyPadding = 10
 
   def dummy(self):
@@ -144,11 +144,11 @@ class Tab:
     choices = self.controller_o.controllerNames
 
     tkvar.set(choices[0]) # set the default option
-
+ 
     popupMenu = tk.OptionMenu(parent, tkvar, *choices)
     tk.Label(parent, text="Choose a controller").grid(row = 0, column = 0)
     popupMenu.grid(row=0, column=1)
-
+ 
     #############################
     # on change dropdown value
     def change_dropdown(*args):
@@ -184,12 +184,12 @@ class controlsFrame(Tab):
 
     ##########################################################
     for _control, (name, control) in enumerate(controls.items()):
-      controls[name][0] = tk.Button(self.tkFrame_Controls, text='Select ' + name, width=15,
+      controls[name][0] = tk.Button(self.tkFrame_Controls, text='Select ' + name, width=15, 
                                  command=lambda n=name, w=super().controller_o: self.setControl(n,w))
       controls[name][0].grid(row = _control+2, sticky='w', pady=3)
       #! control[3] = super().config_o.get('controls', name)
       control[3] = 'name'
-      controls[name][1] = tk.Label(self.tkFrame_Controls,
+      controls[name][1] = tk.Label(self.tkFrame_Controls, 
                                 text=control[3], fg = 'SystemInactiveCaptionText',
                                 relief=tk.GROOVE, width=2,
                                 borderwidth=4, anchor='e', padx=4)
@@ -218,13 +218,13 @@ class controlsFrame(Tab):
       self.config_o.set('controls', name, control[2].get())
 
 
-
+  
 def main():
   root = tk.Tk()
   root.title('%s' % ('Control configurer'))
   tabOptions = ttk.Frame(root, width=1200, height=1200, relief='sunken', borderwidth=5)
   tabOptions.grid()
-
+    
   o_tab = Tab(tabOptions)
   root.mainloop()
 

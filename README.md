@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Volume Control
 Use controller buttons or keyboard keys to control the volume of a set of Windows processes.
 
